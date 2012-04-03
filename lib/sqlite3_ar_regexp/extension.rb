@@ -5,7 +5,6 @@ module SQLite3ARRegexp
     extend ActiveSupport::Concern
 
     included do
-      # @since 1.0.0
       def initialize(db, logger, config)
         super
 
