@@ -5,15 +5,12 @@ module SQLite3ARRegexp
     extend ActiveSupport::Concern
 
     included do
+      # @since 1.0.0
       def initialize(db, logger, config)
         super
+
         db.create_function('regexp', 2) do |func, pattern, expression|
-          regexp = Regexp.new(pattern.to_s, Regexp::IGNORECASE)
-          if expression.to_s.match(regexp)
-            func.result = 1
-          else
-            func.result = 0
-          end
+          func.result = expression.to_s.match(Regexp.new(pattern.to_s, Regexp::IGNORECASE)) ? 1 : 0
         end
       end 
     end 
