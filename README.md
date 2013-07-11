@@ -2,11 +2,13 @@
 
 This adds REGEXP support to SQLite3 in ActiveRecord.
 
+This project uses [Semantic Versioning](http://semver.org).
+
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'sqlite3_ar_regexp'
+    gem 'sqlite3_ar_regexp', '~> 2.0'
 
 And then execute:
 
