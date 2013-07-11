@@ -11,7 +11,7 @@ describe 'SQLite3ARRegexp::Extension' do
     end
   end
 
-  it 'should give ActiveRecord::ConnectionAdapters::SQLite3Adapter "REGEXP" support' do
-    NobelPrizeWinner.where('first_name REGEXP "al|ma"').count.should == 3
+  it 'adds "REGEXP" support for ActiveRecord::ConnectionAdapters::SQLite3Adapter' do
+    expect(NobelPrizeWinner.where('first_name REGEXP "al|ma"')).to have(3).records
   end
 end
