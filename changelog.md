@@ -1,3 +1,6 @@
+## 1.2.0
+ * Add support for ActiveRecord 4.0
+
 ## 1.1.0
  * internal refactoring
 
