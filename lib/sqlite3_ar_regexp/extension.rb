@@ -5,10 +5,13 @@ module SQLite3ARRegexp
     extend ActiveSupport::Concern
 
     included do
-      def initialize(db, logger, config)
-        super
+      alias_method :old_initialize, :initialize
+      private :old_initialize
 
-        db.create_function('regexp', 2) do |func, pattern, expression|
+      def initialize(connection, logger, config)
+        old_initialize(connection, logger, config)
+
+        connection.create_function('regexp', 2) do |func, pattern, expression|
           func.result = expression.to_s.match(Regexp.new(pattern.to_s, Regexp::IGNORECASE)) ? 1 : 0
         end
       end 
