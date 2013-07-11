@@ -1,5 +1,6 @@
-## 1.2.0
+## 2.0.0
  * Add support for ActiveRecord 4.0
+ * Drop support for Ruby < 1.9.3
 
 ## 1.1.0
  * internal refactoring
