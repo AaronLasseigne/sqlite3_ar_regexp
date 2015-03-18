@@ -4,7 +4,7 @@
   <img alt="" src="https://img.shields.io/gem/v/sqlite3_ar_regexp.svg">
 </a>
 <a href="https://travis-ci.org/AaronLasseigne/sqlite3_ar_regexp">
-  <img alt="" src="https://img.shields.io/travis/orgsync/sqlite3_ar_regexp/master.svg">
+  <img alt="" src="https://img.shields.io/travis/AaronLasseigne/sqlite3_ar_regexp/master.svg">
 </a>
 
 This adds REGEXP support to SQLite3 in ActiveRecord.
