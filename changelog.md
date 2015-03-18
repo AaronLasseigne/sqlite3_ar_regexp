@@ -1,3 +1,6 @@
+## 2.1.0
+ * Add support for ActiveRecord >= 4.2
+
 ## 2.0.0
  * Add support for ActiveRecord 4.0
  * Drop support for Ruby < 1.9.3

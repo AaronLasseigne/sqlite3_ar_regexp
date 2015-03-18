@@ -8,8 +8,8 @@ module SQLite3ARRegexp
       alias_method :old_initialize, :initialize
       private :old_initialize
 
-      def initialize(connection, logger, config)
-        old_initialize(connection, logger, config)
+      def initialize(connection, logger, connection_options, config)
+        old_initialize(connection, logger, connection_options, config)
 
         connection.create_function('regexp', 2) do |func, pattern, expression|
           func.result = expression.to_s.match(Regexp.new(pattern.to_s, Regexp::IGNORECASE)) ? 1 : 0
