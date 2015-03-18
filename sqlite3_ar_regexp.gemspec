@@ -19,8 +19,10 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^spec/})
   spec.require_paths = ['lib']
 
+  spec.required_ruby_version = '>= 1.9.3'
+
   spec.add_dependency 'sqlite3'
-  spec.add_dependency 'activerecord', '>= 4.2'
+  spec.add_dependency 'activerecord', '>= 3.2', '< 5'
 
   spec.add_development_dependency 'rake'
   spec.add_development_dependency 'rspec'
