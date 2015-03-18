@@ -24,4 +24,4 @@ Or install it yourself as:
     Account.where('first_name REGEXP "^a"')
 
 ## Credits
-The original code for this was done by Joe Yates and can be found at http://titusd.co.uk/2010/01/31/regular-expressions-in-sqlite/.
+The original code for this was done by Joe Yates.
