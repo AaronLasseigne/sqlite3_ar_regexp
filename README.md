@@ -15,7 +15,7 @@ This project uses [Semantic Versioning](http://semver.org).
 
 Add this line to your application's Gemfile:
 
-    gem 'sqlite3_ar_regexp', '~> 2.1'
+    gem 'sqlite3_ar_regexp', '~> 2.2'
 
 And then execute:
 
