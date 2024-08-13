@@ -1,0 +1,36 @@
+name: Test
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    name: Test Ruby ${{ matrix.ruby }} on activerecord ${{ matrix.activerecord }}
+    strategy:
+      matrix:
+        ruby: ["3.3"]
+        activerecord: ["7.1"]
+        include:
+          - activerecord: "7.0"
+            ruby: "3.2"
+          - activerecord: "6.1"
+            ruby: "3.1"
+          - activerecord: "6.0"
+            ruby: "3.0"
+
+    runs-on: ubuntu-latest
+    env:
+      BUNDLE_GEMFILE: gemfiles/activerecord-${{ matrix.activerecord }}.gemfile
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Ruby ${{ matrix.ruby }}
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby }}
+
+    - name: Install Gems
+      run: bundle install
+
+    - name: Test
+      run: bundle exec rake spec

@@ -1,3 +1,8 @@
+## 3.0.0
+ * Drop support for Ruby < 3.0
+ * Drop support for ActiveRecord < 6.0
+ * Drop support for sqlite3 < 2.0
+
 ## 2.2.0
  * Add support for ActiveRecord >= 5
 
