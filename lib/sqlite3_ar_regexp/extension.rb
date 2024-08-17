@@ -1,5 +1,6 @@
-# borrowed from http://titusd.co.uk/2010/01/31/regular-expressions-in-sqlite/
+# frozen_string_literal: true
 
+# borrowed from http://titusd.co.uk/2010/01/31/regular-expressions-in-sqlite/
 module SQLite3ARRegexp
   module Extension
     extend ActiveSupport::Concern
