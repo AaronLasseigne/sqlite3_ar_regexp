@@ -1,11 +1,6 @@
 # SQLite3 ActiveRecord REGEXP
 
-<a href="https://rubygems.org/gems/sqlite3_ar_regexp">
-  <img alt="" src="https://img.shields.io/gem/v/sqlite3_ar_regexp.svg">
-</a>
-<a href="https://travis-ci.org/AaronLasseigne/sqlite3_ar_regexp">
-  <img alt="" src="https://img.shields.io/travis/AaronLasseigne/sqlite3_ar_regexp/master.svg">
-</a>
+[![Version](https://img.shields.io/gem/v/sqlite3_ar_regexp.svg?style=flat-square)](https://rubygems.org/gems/sqlite3_ar_regexp)
 
 This adds REGEXP support to SQLite3 in ActiveRecord.
 
@@ -15,7 +10,7 @@ This project uses [Semantic Versioning](http://semver.org).
 
 Add this line to your application's Gemfile:
 
-    gem 'sqlite3_ar_regexp', '~> 2.2'
+    gem 'sqlite3_ar_regexp', '~> 3.0'
 
 And then execute:
 
